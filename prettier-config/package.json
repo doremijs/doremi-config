@@ -1,7 +1,7 @@
 {
   "name": "@doremijs/prettier-config",
   "main": "index.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Shared prettier configuration for workspace",
   "author": "erguotou525@gmail.com",
   "keywords": [
