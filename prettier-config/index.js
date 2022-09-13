@@ -2,7 +2,7 @@
  * @type import('prettier').Config
  * @link https://prettier.io/docs/en/options.html
  */
- module.exports = {
+module.exports = {
   // 一行最多 100 字符
   printWidth: 100,
   // 使用 2 个空格缩进
