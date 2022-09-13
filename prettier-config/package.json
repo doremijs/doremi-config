@@ -1,0 +1,24 @@
+{
+  "name": "@doremijs/prettier-config",
+  "main": "index.js",
+  "version": "0.1.1",
+  "description": "Shared prettier configuration for workspace",
+  "author": "erguotou525@gmail.com",
+  "keywords": [
+    "prettier",
+    "doremi",
+    "configuration"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erguotou520/doremi-config.git"
+  },
+  "files": [
+    "index.js",
+    ".prettierignore"
+  ],
+  "bugs": {
+    "url": "https://github.com/erguotou520/doremi-config.git"
+  },
+  "homepage": "https://github.com/erguotou520/doremi-config.git"
+}
