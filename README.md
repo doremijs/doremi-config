@@ -21,24 +21,3 @@
   }
 }
 ```
-
-## Publish prettier config
-
-```sh
-cd packages/prettier-config
-npm publish --access public
-```
-
-## Publish eslint config
-
-```sh
-cd packages/eslint-config
-npm publish --access public
-```
-
-## Publish stylelint config
-
-```sh
-cd packages/stylelint-config
-npm publish --access public
-```

@@ -10,6 +10,9 @@
     "url": "https://github.com/erguotou520/doremi-config.git"
   },
   "files": ["index.js", ".prettierignore"],
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/erguotou520/doremi-config.git"
   },

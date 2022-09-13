@@ -17,6 +17,9 @@
   "files": [
     "index.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/erguotou520/doremi-config.git"
   },
