@@ -1,7 +1,7 @@
 {
   "name": "@doremijs/stylelint-config",
   "main": "index.js",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Shared stylelint configuration for workspace",
   "author": "erguotou525@gmail.com",
   "keywords": [
