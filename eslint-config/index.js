@@ -5,7 +5,6 @@ module.exports = {
   parserOptions: {},
   env: {
     es6: true,
-    jest: true,
     node: true,
     browser: true,
     mocha: true,
@@ -16,11 +15,11 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:prettier/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:vue/vue3-recommended',
-    'plugin:react/jsx-runtime'
+    'plugin:vue/vue3-recommended'
   ],
   rules: {
     'no-unused-vars': 'warn',
@@ -74,8 +73,8 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       parserOptions: {
         ecmaVersion: 2020,
-        tsconfigRootDir: process.cwd(),
-        project: ['./tsconfig.eslint.json', './packages/*/tsconfig.json']
+        tsconfigRootDir: process.cwd()
+        // project: ['./tsconfig.eslint.json', './packages/*/tsconfig.json']
       },
       plugins: ['@typescript-eslint'],
       rules: {

@@ -4,17 +4,17 @@
   "version": "0.1.2",
   "description": "Shared prettier configuration for workspace",
   "author": "erguotou525@gmail.com",
-  "keywords": ["prettier", "doremi", "configuration"],
+  "keywords": ["prettier", "doremi", "doremijs", "configuration"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/erguotou520/doremi-config.git"
+    "url": "https://github.com/doremijs/doremi-config.git"
   },
   "files": ["index.js", ".prettierignore"],
   "publishConfig": {
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/erguotou520/doremi-config.git"
+    "url": "https://github.com/doremijs/doremi-config.git"
   },
-  "homepage": "https://github.com/erguotou520/doremi-config.git"
+  "homepage": "https://github.com/doremijs/doremi-config.git"
 }

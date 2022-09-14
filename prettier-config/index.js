@@ -44,9 +44,9 @@ module.exports = {
   endOfLine: 'auto',
   overrides: [
     {
-      files: '.*rc?(.js)',
+      files: '.*rc',
       options: {
-        parser: 'babel'
+        parser: 'json'
       }
     },
     {
@@ -104,7 +104,7 @@ module.exports = {
       }
     },
     {
-      files: '*.yaml',
+      files: '*.y?(a)ml',
       options: {
         parser: 'yaml'
       }

@@ -7,11 +7,12 @@
   "keywords": [
     "stylelint",
     "doremi",
+    "doremijs",
     "configuration"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/erguotou520/doremi-config.git"
+    "url": "https://github.com/doremijs/doremi-config.git"
   },
   "files": [
     "index.js"
@@ -20,9 +21,9 @@
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/erguotou520/doremi-config.git"
+    "url": "https://github.com/doremijs/doremi-config.git"
   },
-  "homepage": "https://github.com/erguotou520/doremi-config.git",
+  "homepage": "https://github.com/doremijs/doremi-config.git",
   "peerDependencies": {
     "stylelint": ">=14.11.0 <15.0.0"
   },
