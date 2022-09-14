@@ -1,9 +1,8 @@
 /**
  * https://eslint.org/docs/latest/developer-guide/shareable-configs
  */
- module.exports = {
-  parserOptions: {
-  },
+module.exports = {
+  parserOptions: {},
   env: {
     es6: true,
     jest: true,
@@ -21,40 +20,48 @@
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:vue/vue3-recommended',
+    'plugin:react/jsx-runtime'
   ],
   rules: {
-    "no-unused-vars": "warn",
+    'no-unused-vars': 'warn',
     // TypeScript's `noFallthroughCasesInSwitch` option is more robust (#6906)
     'default-case': 'off',
     // 'tsc' already handles this (https://github.com/typescript-eslint/typescript-eslint/issues/291)
     'no-dupe-class-members': 'off',
     // 'tsc' already handles this (https://github.com/typescript-eslint/typescript-eslint/issues/477)
     'no-undef': 'off',
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
 
     // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
-    "import/export": "error",
-    "import/first": "error",
-    "import/no-absolute-path": ["error", { "esmodule": true, "commonjs": true, "amd": false }],
-    "import/no-duplicates": "error",
-    "import/no-named-default": "error",
-    "import/no-webpack-loader-syntax": "error",
+    'import/export': 'error',
+    'import/first': 'error',
+    'import/no-absolute-path': ['error', { esmodule: true, commonjs: true, amd: false }],
+    'import/no-duplicates': 'error',
+    'import/no-named-default': 'error',
+    'import/no-webpack-loader-syntax': 'error',
 
     // https://www.npmjs.com/package/eslint-plugin-n
-    "n/handle-callback-err": "error",
-    "n/no-callback-literal": "error",
-    "n/no-deprecated-api": "error",
-    "n/no-exports-assign": "error",
-    "n/no-new-require": "error",
-    "n/no-path-concat": "error",
+    'n/handle-callback-err': 'error',
+    'n/no-callback-literal': 'error',
+    'n/no-deprecated-api': 'error',
+    'n/no-exports-assign': 'error',
+    'n/no-new-require': 'error',
+    'n/no-path-concat': 'error',
     'n/no-unsupported-features/es-builtins': 'error',
     // 'n/no-unsupported-features/es-syntax': 'error',
     'n/no-unsupported-features/node-builtins': 'error',
-    "n/process-exit-as-throw": "error",
+    'n/process-exit-as-throw': 'error',
 
     // https://www.npmjs.com/package/eslint-plugin-promise
-    "promise/param-names": "error"
+    'promise/param-names': 'error',
+
+    // react
+    'react/prop-types': 'off',
+    'jsx-a11y/media-has-caption': 'off',
+    'jsx-a11y/anchor-is-valid': 'warn',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off'
   },
   settings: {
     react: {
@@ -85,8 +92,8 @@
             functions: false,
             classes: false,
             variables: false,
-            typedefs: false,
-          },
+            typedefs: false
+          }
         ],
         'no-unused-expressions': 'off',
         '@typescript-eslint/no-unused-expressions': [
@@ -94,19 +101,19 @@
           {
             allowShortCircuit: true,
             allowTernary: true,
-            allowTaggedTemplates: true,
-          },
+            allowTaggedTemplates: true
+          }
         ],
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': [
           'warn',
           {
             args: 'none',
-            ignoreRestSiblings: true,
-          },
+            ignoreRestSiblings: true
+          }
         ],
         'no-useless-constructor': 'off',
-        '@typescript-eslint/no-useless-constructor': 'warn',
+        '@typescript-eslint/no-useless-constructor': 'warn'
         // '@typescript-eslint/no-unused-vars': ['warn', {
         //   args: 'none',
         //   ignoreRestSiblings: true,

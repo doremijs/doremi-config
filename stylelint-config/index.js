@@ -13,28 +13,38 @@ module.exports = {
   ],
   plugins: ['stylelint-order', 'stylelint-declaration-block-no-ignored-properties'],
   rules: {
+    'string-quotes': 'single',
     'no-descending-specificity': null,
     'function-url-quotes': 'always',
     'font-family-no-missing-generic-family-keyword': null, // iconfont
     'plugin/declaration-block-no-ignored-properties': true,
     'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['apply']
+      }
+    ],
     'selector-type-no-unknown': [
       true,
       {
         // 需要忽略的特定的选择器
-        ignoreTypes: ['page'],
-      },
+        ignoreTypes: ['page']
+      }
     ],
+    'selector-pseudo-class-no-unknown': [
+      true,
+      {
+        ignorePseudoClasses: ['global']
+      }
+    ]
     // 'unit-allowed-list': []
   },
-  ignoreFiles: ['**/*.{js,jsx,ts,tsx}', '{public,dist,libs}/**/*.*'],
+  ignoreFiles: ['**/*.{js?(x),ts?(x)}', '**/*.min.css', 'public', 'dist', 'libs', 'node_modules'],
   overrides: [
     {
       files: ['**/*.less'],
-      customSyntax: 'postcss-less',
-      rules: {
-        'at-rule-no-unknown': null
-      },
+      customSyntax: 'postcss-less'
     },
     {
       files: ['**/*.module.{css,less,scss}'],
@@ -42,5 +52,5 @@ module.exports = {
         'selector-class-pattern': '^[a-zA-Z0-9-]+$'
       }
     }
-  ],
+  ]
 }
