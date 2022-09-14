@@ -2,10 +2,7 @@
  * https://eslint.org/docs/latest/developer-guide/shareable-configs
  */
  module.exports = {
-  // parser: '@typescript-eslint/parser',
-  "parserOptions": {
-    // ecmaVersion: 2020,
-    "project": "./tsconfig.json"
+  parserOptions: {
   },
   env: {
     es6: true,
@@ -16,66 +13,116 @@
     jasmine: true,
     jest: true
   },
-  plugins: ['@typescript-eslint', 'simple-import-sort'],
+  plugins: ['simple-import-sort', 'jsx-a11y', 'n', 'promise', 'import'],
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:node/recommended',
-    'plugin:n/recommended',
-    'plugin:import/recommended',
-    'plugin:promise/recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
     'plugin:vue/vue3-recommended',
   ],
   rules: {
+    "no-unused-vars": "warn",
+    // TypeScript's `noFallthroughCasesInSwitch` option is more robust (#6906)
+    'default-case': 'off',
+    // 'tsc' already handles this (https://github.com/typescript-eslint/typescript-eslint/issues/291)
+    'no-dupe-class-members': 'off',
+    // 'tsc' already handles this (https://github.com/typescript-eslint/typescript-eslint/issues/477)
+    'no-undef': 'off',
     "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "simple-import-sort/exports": "error",
+
+    // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
+    "import/export": "error",
+    "import/first": "error",
+    "import/no-absolute-path": ["error", { "esmodule": true, "commonjs": true, "amd": false }],
+    "import/no-duplicates": "error",
+    "import/no-named-default": "error",
+    "import/no-webpack-loader-syntax": "error",
+
+    // https://www.npmjs.com/package/eslint-plugin-n
+    "n/handle-callback-err": "error",
+    "n/no-callback-literal": "error",
+    "n/no-deprecated-api": "error",
+    "n/no-exports-assign": "error",
+    "n/no-new-require": "error",
+    "n/no-path-concat": "error",
+    'n/no-unsupported-features/es-builtins': 'error',
+    // 'n/no-unsupported-features/es-syntax': 'error',
+    'n/no-unsupported-features/node-builtins': 'error',
+    "n/process-exit-as-throw": "error",
+
+    // https://www.npmjs.com/package/eslint-plugin-promise
+    "promise/param-names": "error"
   },
-  // settings: {
-  //   node: {
-  //     tryExtensions: ['.js', '.json', '.node', '.ts', '.tsx']
-  //   },
-  //   react: {
-  //     version: 'detect'
-  //   },
-  //   'import/parsers': {
-  //     '@typescript-eslint/parser': ['.ts', '.tsx']
-  //   },
-  //   'import/resolver': {
-  //     typescript: {
-  //       project: ['tsconfig.json', 'packages/*/tsconfig.json']
-  //     },
-  //     node: {
-  //       project: ['tsconfig.json', 'packages/*/tsconfig.json']
-  //     }
-  //   }
-  // },
-  // overrides: [
-  //   {
-  //     files: ['*.ts', '*.tsx'],
-  //     parserOptions: {
-  //       tsconfigRootDir: process.cwd(),
-  //       project: ['./tsconfig.json', './packages/*/tsconfig.json']
-  //     },
-  //     extends: [
-  //     ],
-  //     rules: {
-  //       '@typescript-eslint/no-unused-vars': 'warn',
-  //       '@typescript-eslint/no-unsafe-assignment': 'warn',
-  //       '@typescript-eslint/no-unsafe-call': 'warn',
-  //       '@typescript-eslint/no-unsafe-return': 'warn',
-  //       '@typescript-eslint/no-unsafe-member-access': 'warn'
-  //     }
-  //   },
-  //   {
-  //     files: ['test/**', '*.spec.{js,ts}'],
-  //     plugins: ['jest'],
-  //     extends: ['plugin:jest/recommended'],
-  //     rules: { 'jest/prefer-expect-assertions': 'off' }
-  //   }
-  // ],
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaVersion: 2020,
+        tsconfigRootDir: process.cwd(),
+        project: ['./tsconfig.eslint.json', './packages/*/tsconfig.json']
+      },
+      plugins: ['@typescript-eslint'],
+      rules: {
+        // Add TypeScript specific rules (and turn off ESLint equivalents)
+        '@typescript-eslint/consistent-type-assertions': 'warn',
+        'no-array-constructor': 'off',
+        '@typescript-eslint/no-array-constructor': 'warn',
+        'no-redeclare': 'off',
+        '@typescript-eslint/no-redeclare': 'warn',
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': [
+          'warn',
+          {
+            functions: false,
+            classes: false,
+            variables: false,
+            typedefs: false,
+          },
+        ],
+        'no-unused-expressions': 'off',
+        '@typescript-eslint/no-unused-expressions': [
+          'error',
+          {
+            allowShortCircuit: true,
+            allowTernary: true,
+            allowTaggedTemplates: true,
+          },
+        ],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          {
+            args: 'none',
+            ignoreRestSiblings: true,
+          },
+        ],
+        'no-useless-constructor': 'off',
+        '@typescript-eslint/no-useless-constructor': 'warn',
+        // '@typescript-eslint/no-unused-vars': ['warn', {
+        //   args: 'none',
+        //   ignoreRestSiblings: true,
+        // }],
+        // '@typescript-eslint/no-unsafe-assignment': 'warn',
+        // '@typescript-eslint/no-unsafe-call': 'warn',
+        // '@typescript-eslint/no-unsafe-return': 'warn',
+        // '@typescript-eslint/no-unsafe-member-access': 'warn'
+      }
+    },
+    {
+      files: ['test/**', '*.spec.{js,ts}'],
+      plugins: ['jest'],
+      extends: ['plugin:jest/recommended'],
+      rules: { 'jest/prefer-expect-assertions': 'off' }
+    }
+  ],
   ignorePatterns: ['dist', 'node_modules', '**/{public,lib,libs}/**/*.js']
 }
