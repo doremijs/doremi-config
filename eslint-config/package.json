@@ -4,6 +4,7 @@
   "version": "0.1.8",
   "description": "Shared eslint configuration for workspace",
   "author": "erguotou525@gmail.com",
+  "license": "GPL-3.0-or-later",
   "keywords": ["eslint", "eslintconfig", "doremi", "doremijs", "configuration"],
   "repository": {
     "type": "git",

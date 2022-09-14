@@ -4,6 +4,7 @@
   "version": "0.1.5",
   "description": "Shared stylelint configuration for workspace",
   "author": "erguotou525@gmail.com",
+  "license": "GPL-3.0-or-later",
   "keywords": [
     "stylelint",
     "doremi",

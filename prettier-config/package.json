@@ -4,6 +4,7 @@
   "version": "0.1.3",
   "description": "Shared prettier configuration for workspace",
   "author": "erguotou525@gmail.com",
+  "license": "GPL-3.0-or-later",
   "keywords": ["prettier", "doremi", "doremijs", "configuration"],
   "repository": {
     "type": "git",
