@@ -78,8 +78,17 @@ module.exports = {
       },
       plugins: ['@typescript-eslint'],
       rules: {
-        // Add TypeScript specific rules (and turn off ESLint equivalents)
+        // export type 和 @typescript-eslint/consistent-type-imports 一起使用避免 nest 中 class 被导入为type
+        '@typescript-eslint/consistent-type-exports': 'error',
+        // 右侧定义类型
+        '@typescript-eslint/consistent-generic-constructors': 'warn',
+        // 使用 Record<> 而不是[key: string]
+        '@typescript-eslint/consistent-indexed-object-style': 'warn',
+        // 不要使用 as
         '@typescript-eslint/consistent-type-assertions': 'warn',
+        // 尽量使用 import type
+        '@typescript-eslint/consistent-type-imports': 'warn',
+        // Add TypeScript specific rules (and turn off ESLint equivalents)
         'no-array-constructor': 'off',
         '@typescript-eslint/no-array-constructor': 'warn',
         'no-redeclare': 'off',
