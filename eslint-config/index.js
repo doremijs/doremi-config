@@ -57,6 +57,8 @@ module.exports = {
 
     // react
     'react/prop-types': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
     'jsx-a11y/media-has-caption': 'off',
     'jsx-a11y/anchor-is-valid': 'warn',
     'jsx-a11y/click-events-have-key-events': 'off',
@@ -73,8 +75,8 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       parserOptions: {
         ecmaVersion: 2020,
-        tsconfigRootDir: process.cwd()
-        // project: ['./tsconfig.eslint.json', './packages/*/tsconfig.json']
+        tsconfigRootDir: process.cwd(),
+        project: ['./tsconfig.eslint.json', './packages/*/tsconfig.json']
       },
       plugins: ['@typescript-eslint'],
       rules: {
