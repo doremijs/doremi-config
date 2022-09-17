@@ -1,10 +1,12 @@
+# Not supported
+*.!(js?(x)|ts?(x)|css|scss|sass|less|styl|json?(5)|markdown|md|mdx|graphql|vue|html|y?(a)ml)
+
 # Compiled output
 dist
 node_modules
 
 # Logs
 logs
-*.log
 
 # OS
 .DS_Store
@@ -27,3 +29,4 @@ pnpm-lock.yaml
 
 # Libraries
 lib/
+public/
