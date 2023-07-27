@@ -7,13 +7,11 @@ module.exports = {
     'stylelint-config-standard',
     'stylelint-config-css-modules',
     'stylelint-config-rational-order',
-    'stylelint-config-prettier',
     'stylelint-no-unsupported-browser-features',
     'stylelint-config-standard-scss'
   ],
   plugins: ['stylelint-order', 'stylelint-declaration-block-no-ignored-properties'],
   rules: {
-    'string-quotes': 'single',
     'no-descending-specificity': null,
     'function-url-quotes': 'always',
     'font-family-no-missing-generic-family-keyword': null, // iconfont
