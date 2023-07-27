@@ -11,7 +11,7 @@ module.exports = {
     jasmine: true,
     jest: true
   },
-  plugins: ['simple-import-sort', 'jsx-a11y', 'n', 'promise', 'import'],
+  plugins: ['simple-import-sort', 'jsx-a11y', 'n', 'promise', 'import', 'react-refresh'],
   extends: [
     'eslint:recommended',
     'plugin:prettier/recommended',
