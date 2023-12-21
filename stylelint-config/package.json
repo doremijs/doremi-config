@@ -1,7 +1,7 @@
 {
   "name": "@doremijs/stylelint-config",
   "main": "index.js",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Shared stylelint configuration for workspace",
   "author": "erguotou525@gmail.com",
   "license": "GPL-3.0-or-later",

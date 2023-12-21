@@ -20,7 +20,7 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['apply']
+        ignoreAtRules: ['apply', 'tailwind']
       }
     ],
     'selector-type-no-unknown': [
@@ -35,7 +35,13 @@ module.exports = {
       {
         ignorePseudoClasses: ['global']
       }
-    ]
+    ],
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['apply', 'tailwind']
+      }
+  ],
     // 'unit-allowed-list': []
   },
   ignoreFiles: ['**/*.{js?(x),ts?(x)}', '**/*.min.css', 'public', 'dist', 'libs', 'node_modules'],
