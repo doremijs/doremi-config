@@ -2,7 +2,13 @@
  * https://eslint.org/docs/latest/developer-guide/shareable-configs
  */
 module.exports = {
-  parserOptions: {},
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
   env: {
     es6: true,
     node: true,
@@ -76,7 +82,7 @@ module.exports = {
       parserOptions: {
         ecmaVersion: 2020,
         tsconfigRootDir: process.cwd(),
-        project: ['./tsconfig.eslint.json', './packages/*/tsconfig.json']
+        project: 'tsconfig.json'
       },
       plugins: ['@typescript-eslint'],
       rules: {
