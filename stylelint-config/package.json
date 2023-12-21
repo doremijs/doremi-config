@@ -1,7 +1,7 @@
 {
   "name": "@doremijs/stylelint-config",
   "main": "index.js",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Shared stylelint configuration for workspace",
   "author": "erguotou525@gmail.com",
   "license": "GPL-3.0-or-later",
@@ -26,16 +26,16 @@
   },
   "homepage": "https://github.com/doremijs/doremi-config.git",
   "peerDependencies": {
-    "stylelint": ">=14.11.0"
+    "stylelint": ">=16.0.2"
   },
   "dependencies": {
     "postcss-less": "^6.0.0",
-    "stylelint-config-css-modules": "^4.3.0",
+    "stylelint-config-css-modules": "^4.4.0",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-standard": "^34.0.0",
-    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-config-standard": "^35.0.0",
+    "stylelint-config-standard-scss": "^12.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
     "stylelint-no-unsupported-browser-features": "^7.0.0",
-    "stylelint-order": "^6.0.3"
+    "stylelint-order": "^6.0.4"
   }
 }
