@@ -1,0 +1,20 @@
+{
+  "name": "@doremijs/biome-config",
+  "version": "0.1.0",
+  "description": "Shared biome configuration for workspace",
+  "author": "erguotou525@gmail.com",
+  "license": "GPL-3.0-or-later",
+  "keywords": ["biome", "doremi", "doremijs", "configuration"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doremijs/doremi-config.git"
+  },
+  "files": ["biome.json"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/doremijs/doremi-config.git"
+  },
+  "homepage": "https://github.com/doremijs/doremi-config.git"
+}
