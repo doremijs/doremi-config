@@ -48,7 +48,8 @@
       },
       "suspicious": {
         "noExplicitAny": "warn",
-        "noAsyncPromiseExecutor": "off"
+        "noAsyncPromiseExecutor": "off",
+        "noArrayIndexKey": "warn"
       },
       "a11y": {
         "useKeyWithClickEvents": "off",
