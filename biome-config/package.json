@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/doremijs/doremi-config.git"
   },
-  "homepage": "https://github.com/doremijs/doremi-config.git"
+  "homepage": "https://github.com/doremijs/doremi-config.git",
+  "peerDependencies": {
+    "@biomejs/biome": "^1.8.2"
+  }
 }
