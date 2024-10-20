@@ -1,7 +1,8 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "files": {
     "include": ["*"],
+    "ignoreUnknown": true,
     "ignore": [
       "node_modules",
       "dist",
@@ -18,29 +19,20 @@
       "public/**/*.js"
     ]
   },
-  "formatter": {
+  "vcs": {
     "enabled": true,
-    "indentStyle": "space",
-    "indentWidth": 2,
-    "lineEnding": "lf",
-    "lineWidth": 120
-  },
-  "javascript": {
-    "formatter": {
-      "enabled": true,
-      "arrowParentheses": "asNeeded",
-      "bracketSpacing": true,
-      "bracketSameLine": false,
-      "jsxQuoteStyle": "double",
-      "quoteProperties": "asNeeded",
-      "quoteStyle": "single",
-      "semicolons": "asNeeded",
-      "trailingCommas": "none"
-    }
+    "clientKind": "git",
+    "useIgnoreFile": true
   },
   "linter": {
+    "enabled": true,
     "rules": {
+      "recommended": true,
+      "complexity": {
+        "noBannedTypes": "off"
+      },
       "correctness": {
+        "noUnusedImports": "warn",
         "useExhaustiveDependencies": "warn"
       },
       "style": {
@@ -57,6 +49,35 @@
         "useButtonType": "off",
         "noAutofocus": "off"
       }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 120
+  },
+  "organizeImports": { "enabled": true },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "arrowParentheses": "asNeeded",
+      "bracketSpacing": true,
+      "bracketSameLine": false,
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "none"
+    }
+  },
+  "css": {
+    "parser": {
+      "cssModules": true
+    },
+    "formatter": {
+      "enabled": true
     }
   }
 }
