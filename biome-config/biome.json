@@ -1,23 +1,23 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
   "files": {
-    "include": ["*"],
-    "ignoreUnknown": true,
-    "ignore": [
-      "node_modules",
-      "dist",
-      "build",
-      "coverage",
-      "tmp",
-      "logs",
-      "docs",
-      "test",
-      "tests",
-      "examples",
-      "demo",
-      "example",
-      "public/**/*.js"
-    ]
+    "includes": [
+      "**/*",
+      "!**/node_modules",
+      "!**/dist",
+      "!**/build",
+      "!**/coverage",
+      "!**/tmp",
+      "!**/logs",
+      "!**/docs",
+      "!**/test",
+      "!**/tests",
+      "!**/examples",
+      "!**/demo",
+      "!**/example",
+      "!**/public/**/*.js"
+    ],
+    "ignoreUnknown": true
   },
   "vcs": {
     "enabled": true,
@@ -58,7 +58,7 @@
     "lineEnding": "lf",
     "lineWidth": 120
   },
-  "organizeImports": { "enabled": true },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "javascript": {
     "formatter": {
       "enabled": true,
