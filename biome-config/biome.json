@@ -15,7 +15,8 @@
       "!**/examples",
       "!**/demo",
       "!**/example",
-      "!**/public/**/*.js"
+      "!**/public/**/*.js",
+      "!**/{.claude,.agent}/**/*"
     ],
     "ignoreUnknown": true
   },
@@ -44,10 +45,11 @@
         "noArrayIndexKey": "warn"
       },
       "a11y": {
-        "useKeyWithClickEvents": "off",
-        "useValidAnchor": "off",
+        "noAutofocus": "off",
         "useButtonType": "off",
-        "noAutofocus": "off"
+        "useKeyWithClickEvents": "off",
+        "useMediaCaption": "warn",
+        "useValidAnchor": "off"
       }
     }
   },
